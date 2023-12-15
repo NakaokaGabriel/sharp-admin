@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sharp_relation_user_types",
+  "info": {
+    "singularName": "sharp-relation-user-type",
+    "pluralName": "sharp-relation-user-types",
+    "displayName": "Sharp Relation User Type",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "sharp_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::sharp-user.sharp-user",
+      "inversedBy": "sharp_relation_user_types"
+    },
+    "sharp_user_type": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::sharp-users-type.sharp-users-type",
+      "inversedBy": "sharp_relation_user_types"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "active": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    }
+  }
+}

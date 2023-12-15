@@ -2,7 +2,7 @@
   "name": "sharp-admin",
   "private": true,
   "version": "0.1.0",
-  "description": "A Strapi application",
+  "description": "Sharp admin",
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
@@ -13,11 +13,11 @@
     "@strapi/plugin-graphql": "^4.13.6",
     "@strapi/plugin-i18n": "4.13.5",
     "@strapi/plugin-users-permissions": "4.13.5",
-    "@strapi/strapi": "4.13.5",
+    "@strapi/strapi": "4.15.5",
     "pg": "^8.8.0"
   },
   "author": {
-    "name": "A Strapi developer"
+    "name": "Sharp Studio"
   },
   "strapi": {
     "uuid": "d2027bdd-dbb1-49ef-8518-4c1e73acd9b5"

@@ -4,109 +4,41 @@
   "info": {
     "singularName": "project",
     "pluralName": "projects",
-    "displayName": "projects"
+    "displayName": "Projects",
+    "description": ""
   },
   "options": {
-    "draftAndPublish": false
+    "draftAndPublish": true
   },
-  "pluginOptions": {
-    "i18n": {
-      "localized": true
-    }
-  },
+  "pluginOptions": {},
   "attributes": {
+    "sharp_relation_user_types": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::sharp-relation-user-type.sharp-relation-user-type"
+    },
     "name": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
       "type": "string",
       "required": true
     },
-    "type": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "enumeration",
-      "enum": [
-        "site",
-        "e-commerce",
-        "dashboard",
-        "app",
-        "system",
-        "infrastructure",
-        "all"
-      ],
-      "required": true
-    },
-    "billing_type": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "json",
-      "required": true
-    },
-    "billing": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "enumeration",
-      "enum": [
-        "credit",
-        "debit"
-      ],
-      "required": false
+    "description": {
+      "type": "richtext"
     },
     "status": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
       "type": "enumeration",
       "enum": [
-        "active",
-        "working",
-        "waiting review",
-        "inactive",
-        "removed"
+        "disabled",
+        "waiting payment",
+        "process",
+        "completed"
       ],
-      "required": true,
-      "default": "active"
-    },
-    "companies": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::companie.companie",
-      "inversedBy": "projects"
-    },
-    "total_billing": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "decimal",
+      "default": "waiting payment",
       "required": true
     },
-    "payment": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "enumeration",
-      "enum": [
-        "credit",
-        "debit"
-      ]
+    "active": {
+      "type": "boolean",
+      "default": true,
+      "required": true
     }
   }
 }

@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sharp_users",
+  "info": {
+    "singularName": "sharp-user",
+    "pluralName": "sharp-users",
+    "displayName": "Sharp Users",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "unique": true
+    },
+    "phone": {
+      "type": "string",
+      "required": true,
+      "maxLength": 20
+    },
+    "sharp_relation_user_types": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::sharp-relation-user-type.sharp-relation-user-type",
+      "mappedBy": "sharp_user"
+    },
+    "password": {
+      "type": "password",
+      "required": true,
+      "minLength": 5
+    },
+    "active": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    }
+  }
+}
