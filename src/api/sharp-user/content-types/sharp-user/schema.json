@@ -41,6 +41,13 @@
       "type": "boolean",
       "default": true,
       "required": true
+    },
+    "profile_image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

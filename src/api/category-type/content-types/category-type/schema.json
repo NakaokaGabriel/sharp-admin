@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "category_types",
+  "info": {
+    "singularName": "category-type",
+    "pluralName": "category-types",
+    "displayName": "Category Type",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "active": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    }
+  }
+}
