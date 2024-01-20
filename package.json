@@ -10,11 +10,16 @@
     "strapi": "strapi"
   },
   "dependencies": {
+    "@bn-digital/strapi-plugin-field-uuid": "^1.2.12",
     "@strapi/plugin-graphql": "^4.13.6",
     "@strapi/plugin-i18n": "4.13.5",
     "@strapi/plugin-users-permissions": "4.13.5",
     "@strapi/strapi": "4.15.5",
-    "pg": "^8.8.0"
+    "pg": "^8.8.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^5.2.0",
+    "styled-components": "^5.2.1"
   },
   "author": {
     "name": "Sharp Studio"
@@ -23,7 +28,7 @@
     "uuid": "d2027bdd-dbb1-49ef-8518-4c1e73acd9b5"
   },
   "engines": {
-    "node": ">=16.0.0 <=20.x.x",
+    "node": ">=18.0.0 <=20.x.x",
     "npm": ">=6.0.0"
   },
   "license": "MIT"

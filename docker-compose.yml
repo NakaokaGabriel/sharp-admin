@@ -68,5 +68,5 @@ volumes:
 
 networks:
   sharp-admin:
-    name: Sharp-admin
+    name: Strapi
     driver: bridge
