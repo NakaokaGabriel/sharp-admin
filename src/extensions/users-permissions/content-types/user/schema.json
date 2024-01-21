@@ -74,6 +74,11 @@
       ],
       "required": true,
       "default": "system"
+    },
+    "projects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project.project"
     }
   }
 }

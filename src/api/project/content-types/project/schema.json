@@ -49,6 +49,11 @@
       "regex": "^((\\d{1,3}|\\s*){1})((\\,\\d{3}|\\d)*)(\\s*|\\.(\\d{2}))$",
       "required": true,
       "default": "0"
+    },
+    "processes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::process.process"
     }
   }
 }
