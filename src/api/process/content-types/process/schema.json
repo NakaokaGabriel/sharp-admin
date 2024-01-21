@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "processes",
+  "info": {
+    "singularName": "process",
+    "pluralName": "processes",
+    "displayName": "Process"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "custom_id": {
+      "type": "customField",
+      "regex": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+      "required": true,
+      "customField": "plugin::field-uuid.uuid"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "price": {
+      "type": "string",
+      "required": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "active",
+        "disabled",
+        "waiting"
+      ],
+      "default": "active",
+      "required": true
+    },
+    "start_at": {
+      "type": "datetime",
+      "required": true
+    },
+    "metadata": {
+      "type": "json"
+    },
+    "icon": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "end_date": {
+      "type": "datetime"
+    },
+    "deadline": {
+      "type": "datetime"
+    }
+  }
+}

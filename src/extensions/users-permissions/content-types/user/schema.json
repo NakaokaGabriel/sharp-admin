@@ -64,6 +64,16 @@
       "target": "plugin::users-permissions.role",
       "inversedBy": "users",
       "configurable": false
+    },
+    "theme": {
+      "type": "enumeration",
+      "enum": [
+        "dark",
+        "light",
+        "system"
+      ],
+      "required": true,
+      "default": "system"
     }
   }
 }
