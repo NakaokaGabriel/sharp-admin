@@ -4,23 +4,14 @@
   "info": {
     "singularName": "process",
     "pluralName": "processes",
-    "displayName": "Process"
+    "displayName": "Process",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "custom_id": {
-      "type": "customField",
-      "regex": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
-      "required": true,
-      "customField": "plugin::field-uuid.uuid"
-    },
-    "title": {
-      "type": "string",
-      "required": true
-    },
     "description": {
       "type": "text"
     },
@@ -46,11 +37,12 @@
       "type": "json"
     },
     "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "end_date": {
       "type": "datetime"
