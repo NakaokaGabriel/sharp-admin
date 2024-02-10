@@ -79,6 +79,11 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::project.project"
+    },
+    "type": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::type.type"
     }
   }
 }

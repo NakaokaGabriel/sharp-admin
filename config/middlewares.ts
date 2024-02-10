@@ -1,5 +1,15 @@
+const authentication = async (ctx, next) => {
+  console.log("🚀 ~ authentication ~ ctx:", ctx);
+  await next();
+};
+
 export default [
-  'strapi::errors',
+  {
+    name: 'strapi::errors',
+    config: {
+      authentication
+    }
+  },
   'strapi::security',
   'strapi::cors',
   'strapi::poweredBy',

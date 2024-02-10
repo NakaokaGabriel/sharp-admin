@@ -49,6 +49,11 @@
     },
     "deadline": {
       "type": "datetime"
+    },
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": false
     }
   }
 }
