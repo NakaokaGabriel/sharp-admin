@@ -48,6 +48,23 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::process.process"
+    },
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "manager": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "redirect": {
+      "type": "uid",
+      "required": true
     }
   }
 }
