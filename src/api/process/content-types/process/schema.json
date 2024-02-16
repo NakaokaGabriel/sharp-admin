@@ -8,7 +8,7 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
@@ -33,9 +33,6 @@
       "type": "datetime",
       "required": true
     },
-    "metadata": {
-      "type": "json"
-    },
     "icon": {
       "type": "media",
       "multiple": false,
@@ -44,16 +41,51 @@
         "images"
       ]
     },
-    "end_date": {
-      "type": "datetime"
-    },
-    "deadline": {
-      "type": "datetime"
-    },
     "title": {
       "type": "string",
       "required": true,
       "unique": false
+    },
+    "domain": {
+      "type": "string"
+    },
+    "key": {
+      "type": "string"
+    },
+    "ftp": {
+      "type": "string",
+      "default": "Not Registered"
+    },
+    "email": {
+      "type": "string",
+      "default": "Not Registered"
+    },
+    "due": {
+      "type": "date"
+    },
+    "google_seo": {
+      "type": "enumeration",
+      "enum": [
+        "Active",
+        "Disabled"
+      ],
+      "default": "Disabled"
+    },
+    "hosting": {
+      "type": "enumeration",
+      "enum": [
+        "Active",
+        "Disabled"
+      ],
+      "default": "Disabled"
+    },
+    "web_updates": {
+      "type": "enumeration",
+      "enum": [
+        "Active",
+        "Disabled"
+      ],
+      "default": "Disabled"
     }
   }
 }
