@@ -88,6 +88,13 @@
     "name": {
       "type": "string",
       "required": true
+    },
+    "avatar": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true
     }
   }
 }
