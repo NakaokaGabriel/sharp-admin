@@ -23,10 +23,12 @@
       "type": "enumeration",
       "enum": [
         "active",
+        "due",
         "progress",
         "disabled",
         "finished"
-      ]
+      ],
+      "default": "progress"
     },
     "start_at": {
       "type": "datetime",
