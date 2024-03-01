@@ -12,12 +12,36 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "projects": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::project.project"
-    },
     "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "hosting_status": {
+      "type": "enumeration",
+      "enum": [
+        "Active",
+        "Progress",
+        "Canceled"
+      ],
+      "default": "Active",
+      "required": true
+    },
+    "ftp_access": {
+      "type": "string",
+      "default": "Not Registred",
+      "required": true
+    },
+    "custom_email": {
+      "type": "string",
+      "default": "Not Registred",
+      "required": true
+    },
+    "expire_at": {
+      "type": "date",
+      "required": true
+    },
+    "manager": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "plugin::users-permissions.user"

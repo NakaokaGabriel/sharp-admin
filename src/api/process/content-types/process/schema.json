@@ -22,11 +22,11 @@
     "status": {
       "type": "enumeration",
       "enum": [
-        "active",
-        "disabled",
-        "waiting"
+        "Active",
+        "Disabled",
+        "Waiting"
       ],
-      "default": "active",
+      "default": "Active",
       "required": true
     },
     "start_at": {
