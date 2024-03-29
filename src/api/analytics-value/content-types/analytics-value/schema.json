@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "analytics_values",
+  "info": {
+    "singularName": "analytics-value",
+    "pluralName": "analytics-values",
+    "displayName": "Analytics_value",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "analytics": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::analytic.analytic"
+    },
+    "project": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::project.project"
+    },
+    "date_metrics": {
+      "type": "date",
+      "default": "2024-03-29",
+      "required": true,
+      "unique": false
+    },
+    "percent_improvement": {
+      "type": "decimal",
+      "default": 0,
+      "required": true
+    },
+    "total_value": {
+      "type": "decimal",
+      "default": 0,
+      "required": true
+    }
+  }
+}

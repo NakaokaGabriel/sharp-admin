@@ -16,14 +16,6 @@
       "type": "string",
       "required": true
     },
-    "value": {
-      "type": "biginteger",
-      "required": true,
-      "default": "0"
-    },
-    "date": {
-      "type": "date"
-    },
     "uuid": {
       "type": "customField",
       "regex": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
