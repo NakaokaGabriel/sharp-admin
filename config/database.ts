@@ -24,7 +24,13 @@ export default ({ env }) => {
           ),
         },
       },
-      pool: { min: env.int('DATABASE_POOL_MIN', 2), max: env.int('DATABASE_POOL_MAX', 10) },
+      pool: { min: env.int('DATABASE_POOL_MIN', 0), max: env.int('DATABASE_POOL_MAX', 1),
+      acquireTimeoutMillis: 6000000,
+      createTimeoutMillis: 300000,
+      destroyTimeoutMillis: 300000,
+      idleTimeoutMillis: 30000,
+      reapIntervalMillis:1000,
+      createRetryIntervalMillis: 2000 },
     },
     mysql2: {
       connection: {
@@ -66,9 +72,19 @@ export default ({ env }) => {
             true
           ),
         },
-        schema: env('DATABASE_SCHEMA', 'public'),
+      acquireConnectionTimeout: 600000,
+      pool: {
+        min: 0,
+        max: 100,
+        acquireTimeoutMillis: 300000,
+        createTimeoutMillis: 300000,
+        destroyTimeoutMillis: 50000,
+        idleTimeoutMillis: 300000,
+        reapIntervalMillis: 10000,
+        createRetryIntervalMillis: 2000,
+        propagateCreateError: false,
       },
-      pool: { min: env.int('DATABASE_POOL_MIN', 2), max: env.int('DATABASE_POOL_MAX', 10) },
+      debug: true
     },
     sqlite: {
       connection: {
@@ -81,7 +97,8 @@ export default ({ env }) => {
       },
       useNullAsDefault: true,
     },
-  };
+  }
+}
 
   return {
     connection: {
