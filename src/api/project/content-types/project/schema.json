@@ -68,11 +68,6 @@
       "type": "date",
       "required": true,
       "default": "2024-02-29"
-    },
-    "billings": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::billing.billing"
     }
   }
 }
