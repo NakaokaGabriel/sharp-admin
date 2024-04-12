@@ -1,5 +1,4 @@
 const authentication = async (ctx, next) => {
-  console.log("🚀 ~ authentication ~ ctx:", ctx);
   await next();
 };
 
@@ -36,8 +35,15 @@ export default [
       },
     },
   },
+  {
+    name: 'strapi::cors',
+    config: {
+      enabled: false,
+      headers: '*',
+      origin: ['sharp-dashboard.vercel.app', 'http://sharp-dashboard.vercel.app', 'https://sharp-dashboard.vercel.app/', 'http://localhost:1337', 'http://localhost:3000'],
+    },
+  },
   'strapi::security',
-  'strapi::cors',
   'strapi::poweredBy',
   'strapi::logger',
   'strapi::query',

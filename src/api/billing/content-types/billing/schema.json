@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "billings",
+  "info": {
+    "singularName": "billing",
+    "pluralName": "billings",
+    "displayName": "Billing",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "invoice_number": {
+      "type": "biginteger",
+      "default": "0",
+      "required": true,
+      "unique": true
+    },
+    "issued_date": {
+      "type": "date",
+      "required": true
+    },
+    "total": {
+      "type": "decimal",
+      "required": true,
+      "default": 0
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "active",
+        "paid",
+        "due",
+        "progress",
+        "disabled",
+        "finished"
+      ],
+      "default": "active"
+    },
+    "project": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::project.project",
+      "inversedBy": "billings"
+    },
+    "paypal_url": {
+      "type": "text",
+      "required": false
+    }
+  }
+}

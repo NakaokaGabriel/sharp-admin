@@ -22,11 +22,11 @@
     "status": {
       "type": "enumeration",
       "enum": [
-        "Active",
-        "Disabled",
-        "Waiting"
+        "Updated",
+        "Ongoing",
+        "Waiting feedback"
       ],
-      "default": "Active",
+      "default": "Updated",
       "required": true
     },
     "start_at": {
@@ -52,14 +52,6 @@
       "type": "date"
     },
     "google_seo": {
-      "type": "enumeration",
-      "enum": [
-        "Active",
-        "Disabled"
-      ],
-      "default": "Disabled"
-    },
-    "web_updates": {
       "type": "enumeration",
       "enum": [
         "Active",
