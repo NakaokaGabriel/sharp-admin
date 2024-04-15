@@ -40,7 +40,7 @@ export default [
     config: {
       enabled: false,
       headers: '*',
-      origin: ['sharp-dashboard.vercel.app', 'http://sharp-dashboard.vercel.app', 'https://sharp-dashboard.vercel.app/', 'http://localhost:1337', 'http://localhost:3000'],
+      origin: ['https://dashboard.sharpstudio.host', 'https://sharpstudio.host'],
     },
   },
   'strapi::security',
