@@ -45,9 +45,14 @@
       "target": "api::project.project",
       "inversedBy": "billings"
     },
-    "paypal_url": {
-      "type": "text",
-      "required": false
+    "invoice_url": {
+      "type": "string",
+      "required": true
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
     }
   }
 }
