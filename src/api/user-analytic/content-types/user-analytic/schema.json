@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_analytics",
+  "info": {
+    "singularName": "user-analytic",
+    "pluralName": "user-analytics",
+    "displayName": "User_analytics",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "analytics": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::analytic.analytic"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "total_value": {
+      "type": "decimal",
+      "required": true,
+      "default": 0
+    }
+  }
+}
